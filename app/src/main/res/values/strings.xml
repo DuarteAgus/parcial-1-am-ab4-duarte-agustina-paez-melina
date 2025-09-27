@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Prueba</string>
+    <string name="welcome_message">¡Hola Mundo!</string>
+</resources>
