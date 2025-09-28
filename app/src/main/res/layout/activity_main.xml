@@ -1,29 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/clMainRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/violet_900"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+    <ScrollView
+        android:id="@+id/svContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/welcome_message" />
+            android:orientation="vertical"
+            android:padding="@dimen/pad_screen">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            <!-- Marca -->
+            <TextView
+                android:id="@+id/tvBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_title"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <!-- Botón “Empieza ahora” (arriba) -->
+            <Button
+                android:id="@+id/btnStartNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_start_now"
+                android:layout_marginTop="@dimen/space_sm"/>
+
+            <!-- Título principal -->
+            <TextView
+                android:id="@+id/tvHeroTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hero_title"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="@dimen/title_size"
+                android:layout_marginTop="@dimen/space_lg"/>
+
+            <!-- Párrafo -->
+            <TextView
+                android:id="@+id/tvHeroBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hero_body"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/subtitle_size"
+                android:layout_marginTop="@dimen/space_sm"/>
+
+            <!-- Compatibilidad -->
+            <TextView
+                android:id="@+id/tvCompatibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hero_compatibility"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/subtitle_size"
+                android:layout_marginTop="@dimen/space_sm"/>
+
+            <!-- Contenedor para elemento dinámico (se agrega en Java) -->
+            <LinearLayout
+                android:id="@+id/llDynamicBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/space_md"/>
+
+            <!-- Botón “Descubrí todas las ofertas” -->
+            <Button
+                android:id="@+id/btnSeeOffers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_see_offers"
+                android:layout_marginTop="@dimen/space_lg"/>
+
+            <!-- Título de la grilla -->
+            <TextView
+                android:id="@+id/tvGridTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/grid_title"
+                android:textColor="@color/text_primary"
+                android:textStyle="bold"
+                android:textSize="@dimen/title_size"
+                android:layout_marginTop="@dimen/space_lg"/>
+
+            <!-- Grilla 3x3: imágenes estáticas (luego reemplazar src por @drawable/*) -->
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridGames"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="3"
+                android:useDefaultMargins="true"
+                android:layout_marginTop="@dimen/space_md">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_1"/>
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_2"/>
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_3"/>
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_4"/>
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_5"/>
+
+            <ImageView
+                android:id="@+id/img6"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_6"/>
+
+            <ImageView
+                android:id="@+id/img7"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_7"/>
+
+            <ImageView
+                android:id="@+id/img8"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_8"/>
+
+            <ImageView
+                android:id="@+id/img9"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                app:layout_columnWeight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher"
+                android:contentDescription="@string/cd_game_9"/>
+
     </LinearLayout>
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
