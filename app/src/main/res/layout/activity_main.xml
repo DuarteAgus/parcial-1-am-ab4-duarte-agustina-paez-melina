@@ -26,7 +26,6 @@
             android:orientation="vertical"
             android:padding="@dimen/pad_screen">
 
-            <!-- Marca -->
             <TextView
                 android:id="@+id/tvBrand"
                 android:layout_width="match_parent"
@@ -36,7 +35,6 @@
                 android:textStyle="bold"
                 android:textSize="18sp"/>
 
-            <!-- Botón “Empieza ahora” -->
             <Button
                 android:id="@+id/btnStartNow"
                 android:layout_width="wrap_content"
@@ -54,7 +52,6 @@
                 android:textSize="@dimen/title_size"
                 android:layout_marginTop="@dimen/space_lg"/>
 
-            <!-- Párrafo -->
             <TextView
                 android:id="@+id/tvHeroBody"
                 android:layout_width="match_parent"
@@ -64,7 +61,6 @@
                 android:textSize="@dimen/subtitle_size"
                 android:layout_marginTop="@dimen/space_sm"/>
 
-            <!-- Compatibilidad -->
             <TextView
                 android:id="@+id/tvCompatibility"
                 android:layout_width="match_parent"
@@ -74,7 +70,6 @@
                 android:textSize="@dimen/subtitle_size"
                 android:layout_marginTop="@dimen/space_sm"/>
 
-            <!-- Espacio para banner dinámico (lógica) -->
             <LinearLayout
                 android:id="@+id/llDynamicBanner"
                 android:layout_width="match_parent"
@@ -82,7 +77,6 @@
                 android:orientation="vertical"
                 android:layout_marginTop="@dimen/space_md"/>
 
-            <!-- Botón ofertas -->
             <Button
                 android:id="@+id/btnSeeOffers"
                 android:layout_width="wrap_content"
@@ -90,7 +84,6 @@
                 android:text="@string/btn_see_offers"
                 android:layout_marginTop="@dimen/space_lg"/>
 
-            <!-- Título de grilla -->
             <TextView
                 android:id="@+id/tvGridTitle"
                 android:layout_width="match_parent"
@@ -101,7 +94,6 @@
                 android:textSize="@dimen/title_size"
                 android:layout_marginTop="@dimen/space_lg"/>
 
-            <!-- Grilla 3x3 -->
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridGames"
                 android:layout_width="match_parent"
