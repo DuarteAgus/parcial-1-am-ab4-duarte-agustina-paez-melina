@@ -2,7 +2,7 @@ package com.example.prueba;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;;
 import androidx.core.graphics.Insets;
