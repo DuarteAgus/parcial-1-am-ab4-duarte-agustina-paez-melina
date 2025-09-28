@@ -1,4 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Prueba</string>
-    <string name="welcome_message">¡Hola Mundo!</string>
+    <string name="app_name">NuCloud Gaming</string>
+
+    <string name="brand_title">NuCloud GAMING</string>
+    <string name="hero_title">Tu nueva forma de jugar\nEn la Nube</string>
+
+    <string name="hero_body">Con NuCloud Gaming convierte al instante tu celular, laptop, PC de escritorio o tablet en una máquina lista para videojuegos exigentes. Accede a tus títulos favoritos desde cualquier lugar y disfruta de un rendimiento fluido sin necesidad de hardware costoso.</string>
+
+    <string name="hero_compatibility">Compatible con plataformas como Steam, Epic Games, Xbox Cloud, GOG y más.</string>
+
+    <string name="btn_start_now">Empieza ahora</string>
+    <string name="btn_see_offers">Descubrí todas las ofertas</string>
 </resources>
+
