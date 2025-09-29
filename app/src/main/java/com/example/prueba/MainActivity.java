@@ -1,8 +1,10 @@
 package com.example.prueba;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Nullable private LinearLayout llDynamicBanner;
 
+    // Para el scroll hacia la grilla
+    @Nullable private ScrollView svContent;
+    @Nullable private View gridGames;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,19 +43,21 @@ public class MainActivity extends AppCompatActivity {
 
         llDynamicBanner = findViewById(R.id.llDynamicBanner);
 
+        svContent = findViewById(R.id.svContent);
+        gridGames = findViewById(R.id.gridGames);
 
         if (btnStartNow != null) {
             btnStartNow.setOnClickListener(v ->
-                    Toast.makeText(this, "Arrancamos 🚀", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Arrancamos", Toast.LENGTH_SHORT).show()
             );
         }
 
         if (btnSeeOffers != null) {
-            btnSeeOffers.setOnClickListener(v ->
-                    Toast.makeText(this, "Mostrando ofertas…", Toast.LENGTH_SHORT).show()
-            );
+            btnSeeOffers.setOnClickListener(v -> {
+                Toast.makeText(this, "Mostrando ofertas…", Toast.LENGTH_SHORT).show();
+                scrollToGrid();
+            });
         }
-
 
         addDynamicBanner();
     }
@@ -58,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         if (llDynamicBanner == null) return;
 
         TextView banner = new TextView(this);
-        banner.setText("🎮 Promo del día: 3 meses -20%");
+        banner.setText(" Promo del día: 3 meses -20%");
         banner.setTextColor(ContextCompat.getColor(this, R.color.text_primary));
         banner.setTextSize(16f);
 
@@ -67,5 +75,20 @@ public class MainActivity extends AppCompatActivity {
         banner.setBackgroundColor(ContextCompat.getColor(this, R.color.card_bg));
 
         llDynamicBanner.addView(banner);
+    }
+
+    private void scrollToGrid() {
+        if (svContent == null || gridGames == null) return;
+
+        svContent.post(() -> {
+            int y = gridGames.getTop() - dp(12); // margen
+            if (y < 0) y = 0;
+            svContent.smoothScrollTo(0, y);
+        });
+    }
+
+    private int dp(int dp) {
+        float density = getResources().getDisplayMetrics().density;
+        return Math.round(dp * density);
     }
 }
