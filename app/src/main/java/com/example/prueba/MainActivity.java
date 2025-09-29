@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         if (svContent == null || gridGames == null) return;
 
         svContent.post(() -> {
-            int y = gridGames.getTop() - dp(12); // margen
+            int y = gridGames.getTop() - dp(12);
             if (y < 0) y = 0;
             svContent.smoothScrollTo(0, y);
         });
