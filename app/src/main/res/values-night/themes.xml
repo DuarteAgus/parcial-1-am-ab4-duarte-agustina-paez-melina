@@ -1,10 +1,10 @@
 <resources>
     <style name="Theme.NuCloudViolet" parent="Theme.Material3.Dark.NoActionBar">
 
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/violet_900</item>
         <item name="colorOnPrimary">@color/white</item>
 
-        <item name="colorSecondary">@color/accent_rose</item>
+        <item name="colorSecondary">@color/button_rose</item>
         <item name="colorOnSecondary">@color/white</item>
 
         <item name="colorSurface">@color/violet_900</item>
