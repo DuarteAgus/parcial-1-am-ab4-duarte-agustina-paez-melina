@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clMainRoot"
@@ -12,21 +11,24 @@
         android:id="@+id/imgBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/fondo_pantalla"
         android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/fondo_pantalla"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:id="@+id/svContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/llMain"
@@ -35,161 +37,173 @@
             android:orientation="vertical"
             android:padding="@dimen/pad_screen">
 
-            <TextView
-                android:id="@+id/tvBrand"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/headerRow"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/brand_title"
-                android:textColor="@color/text_primary"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/btnStartNow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_sm"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/btn_start_now"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/button_rose" /
+                <TextView
+                    android:id="@+id/tvBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_sm"
+                    android:text="@string/brand_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/subtitle_size" />
+
+                <!-- CTA: Empieza ahora (alineado a la derecha del header) -->
+                <Button
+                    android:id="@+id/btnStartNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/button_rose"
+                    android:paddingStart="16dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/btn_start_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:layout_constraintBaseline_toBaselineOf="@id/tvBrand"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
                 android:id="@+id/tvHeroTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
                 android:text="@string/hero_title"
-                android:textColor="@color/text_primary"
-                android:textStyle="bold"
+                android:textColor="@color/purple_200"
                 android:textSize="@dimen/title_size"
-                android:layout_marginTop="@dimen/space_lg"/>
+                android:textStyle="bold" />>
 
             <TextView
                 android:id="@+id/tvHeroBody"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
                 android:text="@string/hero_body"
                 android:textColor="@color/text_secondary"
-                android:textSize="@dimen/subtitle_size"
-                android:layout_marginTop="@dimen/space_sm"/>
+                android:textSize="@dimen/subtitle_size" />
 
             <TextView
                 android:id="@+id/tvCompatibility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_sm"
                 android:text="@string/hero_compatibility"
                 android:textColor="@color/text_secondary"
-                android:textSize="@dimen/subtitle_size"
-                android:layout_marginTop="@dimen/space_sm"/>
+                android:textSize="@dimen/subtitle_size" />
 
             <LinearLayout
                 android:id="@+id/llDynamicBanner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="@dimen/space_md"/>
+                android:layout_marginTop="@dimen/space_md"
+                android:orientation="vertical" />
 
             <Button
                 android:id="@+id/btnSeeOffers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/space_lg"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/space_lg"
+                android:backgroundTint="@color/button_rose"
                 android:text="@string/btn_see_offers"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/button_rose" />
+                android:textColor="@color/white" />
 
 
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridGames"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
                 app:columnCount="3"
                 app:rowCount="3"
-                app:useDefaultMargins="true"
-                android:layout_marginTop="@dimen/space_md">
-
+                app:useDefaultMargins="true">
 
 
                 <ImageView
                     android:id="@+id/img1"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_1"
                     android:scaleType="centerCrop"
                     android:src="@drawable/call_of_duty"
-                    android:contentDescription="@string/cd_game_1"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img2"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_2"
                     android:scaleType="centerCrop"
                     android:src="@drawable/gta_v"
-                    android:contentDescription="@string/cd_game_2"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img3"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_3"
                     android:scaleType="centerCrop"
                     android:src="@drawable/the_last"
-                    android:contentDescription="@string/cd_game_3"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img4"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_4"
                     android:scaleType="centerCrop"
                     android:src="@drawable/far_cry"
-                    android:contentDescription="@string/cd_game_4"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img5"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_5"
                     android:scaleType="centerCrop"
                     android:src="@drawable/assassins_creed"
-                    android:contentDescription="@string/cd_game_5"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img6"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_6"
                     android:scaleType="centerCrop"
                     android:src="@drawable/the_evil_within"
-                    android:contentDescription="@string/cd_game_6"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img7"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_7"
                     android:scaleType="centerCrop"
                     android:src="@drawable/red_dead"
-                    android:contentDescription="@string/cd_game_7"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img8"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_8"
                     android:scaleType="centerCrop"
                     android:src="@drawable/the_glder"
-                    android:contentDescription="@string/cd_game_8"/>
+                    app:layout_columnWeight="1" />
 
                 <ImageView
                     android:id="@+id/img9"
                     android:layout_width="0dp"
                     android:layout_height="110dp"
-                    app:layout_columnWeight="1"
+                    android:contentDescription="@string/cd_game_9"
                     android:scaleType="centerCrop"
                     android:src="@drawable/the_witcher"
-                    android:contentDescription="@string/cd_game_9"/>
+                    app:layout_columnWeight="1" />
 
             </androidx.gridlayout.widget.GridLayout>
         </LinearLayout>
