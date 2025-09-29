@@ -109,7 +109,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/call_of_duty"
                     android:contentDescription="@string/cd_game_1"/>
 
                 <ImageView
@@ -118,7 +118,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/gta_v"
                     android:contentDescription="@string/cd_game_2"/>
 
                 <ImageView
@@ -127,7 +127,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/the_last"
                     android:contentDescription="@string/cd_game_3"/>
 
                 <ImageView
@@ -136,7 +136,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/far_cry"
                     android:contentDescription="@string/cd_game_4"/>
 
                 <ImageView
@@ -145,7 +145,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/assassins_creed"
                     android:contentDescription="@string/cd_game_5"/>
 
                 <ImageView
@@ -154,7 +154,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/the_evil_within"
                     android:contentDescription="@string/cd_game_6"/>
 
                 <ImageView
@@ -163,7 +163,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/red_dead"
                     android:contentDescription="@string/cd_game_7"/>
 
                 <ImageView
@@ -172,7 +172,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/the_glder"
                     android:contentDescription="@string/cd_game_8"/>
 
                 <ImageView
@@ -181,7 +181,7 @@
                     android:layout_height="110dp"
                     app:layout_columnWeight="1"
                     android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/the_witcher"
                     android:contentDescription="@string/cd_game_9"/>
 
             </androidx.gridlayout.widget.GridLayout>
