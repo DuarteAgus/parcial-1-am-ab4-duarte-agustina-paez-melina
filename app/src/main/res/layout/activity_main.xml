@@ -183,8 +183,8 @@
                     android:scaleType="centerCrop"
                     android:src="@mipmap/ic_launcher"
                     android:contentDescription="@string/cd_game_9"/>
-            </androidx.gridlayout.widget.GridLayout>
 
+            </androidx.gridlayout.widget.GridLayout>
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

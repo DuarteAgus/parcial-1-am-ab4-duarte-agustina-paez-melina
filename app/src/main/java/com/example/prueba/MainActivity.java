@@ -12,7 +12,6 @@ import androidx.core.content.ContextCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Vistas (nullable por si algún id todavía no está en el XML)
     @Nullable private TextView tvBrand;
     @Nullable private TextView tvHeroTitle;
     @Nullable private TextView tvHeroBody;
@@ -28,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Vincular vistas
         tvBrand         = findViewById(R.id.tvBrand);
         tvHeroTitle     = findViewById(R.id.tvHeroTitle);
         tvHeroBody      = findViewById(R.id.tvHeroBody);
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         llDynamicBanner = findViewById(R.id.llDynamicBanner);
 
-        // Listeners de botones
+
         if (btnStartNow != null) {
             btnStartNow.setOnClickListener(v ->
                     Toast.makeText(this, "Arrancamos 🚀", Toast.LENGTH_SHORT).show()
@@ -52,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             );
         }
 
-        // Elemento dinámico (requisito del profe)
+
         addDynamicBanner();
     }
 
