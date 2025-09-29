@@ -6,9 +6,18 @@
     android:id="@+id/clMainRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/violet_900"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/fondo_pantalla"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
     <ScrollView
         android:id="@+id/svContent"
         android:layout_width="0dp"
@@ -39,8 +48,8 @@
                 android:id="@+id/btnStartNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/btn_start_now"
-                android:layout_marginTop="@dimen/space_sm"/>
+                android:layout_marginTop="@dimen/space_sm"
+                android:text="@string/btn_start_now" />
 
             <TextView
                 android:id="@+id/tvHeroTitle"
@@ -102,6 +111,8 @@
                 app:rowCount="3"
                 app:useDefaultMargins="true"
                 android:layout_marginTop="@dimen/space_md">
+
+
 
                 <ImageView
                     android:id="@+id/img1"
