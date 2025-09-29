@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Nullable private LinearLayout llDynamicBanner;
 
-    // Para el scroll hacia la grilla
     @Nullable private ScrollView svContent;
     @Nullable private View gridGames;
 
