@@ -49,8 +49,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_sm"
-                android:text="@string/btn_start_now" />
-
+                android:layout_gravity="center_horizontal"
+                android:text="@string/btn_start_now"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button_rose" /
             <TextView
                 android:id="@+id/tvHeroTitle"
                 android:layout_width="match_parent"
@@ -90,18 +92,12 @@
                 android:id="@+id/btnSeeOffers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:layout_gravity="center_horizontal"
                 android:text="@string/btn_see_offers"
-                android:layout_marginTop="@dimen/space_lg"/>
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button_rose" />
 
-            <TextView
-                android:id="@+id/tvGridTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/grid_title"
-                android:textColor="@color/text_primary"
-                android:textStyle="bold"
-                android:textSize="@dimen/title_size"
-                android:layout_marginTop="@dimen/space_lg"/>
 
             <androidx.gridlayout.widget.GridLayout
                 android:id="@+id/gridGames"

@@ -11,7 +11,7 @@
     <color name="colorRatingInactive">#9C9D91</color>
 
     <color name="violet_900">#221234</color>
-    <color name="accent_rose">#E86BD8</color>
+    <color name="button_rose">#EC4899</color>
     <color name="text_primary">@color/white</color>
     <color name="text_secondary">#D6CFE3</color>
     <color name="card_bg">#2B1844</color>
