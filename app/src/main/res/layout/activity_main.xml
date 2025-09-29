@@ -49,9 +49,9 @@
                     android:layout_marginTop="@dimen/space_sm"
                     android:text="@string/brand_title"
                     android:textColor="@color/text_primary"
-                    android:textSize="@dimen/subtitle_size" />
+                    android:textSize="@dimen/subtitle_size"
+                    tools:ignore="MissingConstraints" />
 
-                <!-- CTA: Empieza ahora (alineado a la derecha del header) -->
                 <Button
                     android:id="@+id/btnStartNow"
                     android:layout_width="wrap_content"
@@ -76,7 +76,7 @@
                 android:text="@string/hero_title"
                 android:textColor="@color/purple_200"
                 android:textSize="@dimen/title_size"
-                android:textStyle="bold" />>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvHeroBody"

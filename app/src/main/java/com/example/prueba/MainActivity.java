@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         llDynamicBanner.addView(banner);
     }
 
+
     private void scrollToGrid() {
         if (svContent == null || gridGames == null) return;
 
